@@ -29,11 +29,13 @@ interface Topic {
 
   liveLink: string;
 }
-
 interface Module {
-  id: number;
-  title: string;
+  id: string;
+  name: string;
   topics: Topic[];
+  liveSessionLink: string;
+  sessionTiming: string;
+  instructor: string;
 }
 
 // ─── MOCK COURSES ──────────────────────────────────────────────────────
@@ -779,4 +781,5 @@ function PlaceholderPanel({ title }: { title: string }) {
         </a>
       </div>
     </div>
-  );}
+  );
+}
